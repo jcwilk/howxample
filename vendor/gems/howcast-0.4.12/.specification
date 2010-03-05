@@ -1,0 +1,106 @@
+--- !ruby/object:Gem::Specification 
+name: howcast
+version: !ruby/object:Gem::Version 
+  version: 0.4.12
+platform: ruby
+authors: 
+- Jingshen Jimmy Zhang
+- Ian Smith-Heisters
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-03-02 00:00:00 -08:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: hpricot
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: "0"
+    version: 
+- !ruby/object:Gem::Dependency 
+  name: rspec
+  type: :development
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: "0"
+    version: 
+description: "    Howcast offers an Application Programming Interface (API) which allows\n    developers to build applications that interface with Howcast. The Howcast\n    API is RESTful (REpresentational State Transfer) and users of this API will\n    be able: 1) Retreive detailed information about a single video, including\n    metadata such as title, description, video views, rating etc; 2) Retrieve a\n    list of videos restricted by a set of filters offered by Howcast and sorted\n    using several metrics that you can specify (most recent, most views, etc);\n    3) Search for video; 4) And much more. Note: Before you can use our APIs,\n    you must register an API key, that is submitted with each request.\n"
+email: support@howcast.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- README.markdown
+files: 
+- CHANGELOG
+- License.txt
+- Manifest
+- README.markdown
+- Rakefile
+- VERSION
+- howcast.gemspec
+- lib/howcast.rb
+- lib/howcast/client.rb
+- lib/howcast/client/base.rb
+- lib/howcast/client/category.rb
+- lib/howcast/client/search.rb
+- lib/howcast/client/video.rb
+- lib/howcast/errors.rb
+- lib/howcast/logging.rb
+- spec/howcast/client/base_spec.rb
+- spec/howcast/client/category_spec.rb
+- spec/howcast/client/search_spec.rb
+- spec/howcast/client/video_spec.rb
+- spec/output_capture_helper.rb
+- spec/spec.opts
+- spec/spec_helper.rb
+- spec/string_matchers_helper.rb
+- spec/xml_fixtures_helper.rb
+- tasks/github.rake
+has_rdoc: true
+homepage: http://github.com/howcast/howcast-gem
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --charset=UTF-8
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.3.5
+signing_key: 
+specification_version: 3
+summary: Howcast API Ruby Wrapper
+test_files: 
+- spec/output_capture_helper.rb
+- spec/xml_fixtures_helper.rb
+- spec/string_matchers_helper.rb
+- spec/spec_helper.rb
+- spec/howcast/client/base_spec.rb
+- spec/howcast/client/video_spec.rb
+- spec/howcast/client/category_spec.rb
+- spec/howcast/client/search_spec.rb
