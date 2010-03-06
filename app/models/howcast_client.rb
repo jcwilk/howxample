@@ -1,16 +1,23 @@
+# A wrapper for the Howcast::Client which will return the videos as unsaved Video objects with
+# the Howcast::Client::Video objects attached
+
 class HowcastClient
-  def self.api_key=(path)
-    @@_api_key = path
+  attr_accessor :api
+
+  def initialize
+    raise "API Key not present!" if HowcastClient.api_key.blank?
+    self.api = Howcast::Client.new(:key => HowcastClient.api_key)
+  end
+
+  def self.api_key=(key)
+    @@_api_key = key
   end
 
   def self.api_key
     @@_api_key
   end
 
-  private
-
-  def self.api
-    raise "API Key not present!" if self.api_key.blank?
-    return Howcast::Client.new(:key => self.api_key)
+  def videos(options = {})
+    return Video.new_from_howcast(api.videos(options))
   end
 end

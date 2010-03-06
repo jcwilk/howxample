@@ -17,8 +17,8 @@ Rails::Initializer.run do |config|
   # Specify gems that this application depends on and have them installed with rake gems:install
   #config.gem "rspec", :lib => false, :version => ">= 1.2.9"
   #config.gem "rspec-rails", :lib => false, :version => ">= 1.2.9"
-  #config.gem "thoughtbot-factory_girl", :lib    => "factory_girl", :source => "http://gems.github.com"
-  #config.gem "howcast", :lib => false, :version => ">= 0.4.12"
+  config.gem "thoughtbot-factory_girl", :lib    => "factory_girl", :source => "http://gems.github.com"
+  config.gem "howcast", :lib => false, :version => ">= 0.4.12"
   #config.gem "cucumber", :lib => false, :version => ">= 0.2.3"
   #config.gem "webrat", :lib => false, :version => ">= 0.4.3"
   #config.gem "nokogiri", :lib => false, :version => ">= 1.2.3"
@@ -42,3 +42,7 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
+
+#TODO: Load the api key from a file
+
+#TODO: Get exception notifier installed before production
