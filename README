@@ -1,1 +1,10 @@
 Example code for Howcast! Just an example, folks...
+
+The application is a somewhat contrived Video Flagger which allows you to browse, search, and
+flag videos. It keeps track of which videos have been flagged in its local database and could
+easily extend to be able to remember notes, comments, or other info that could be stored locally
+with the id of the external video.
+
+Most of the project is unfinished, such as the views, most of the model functionality, and the
+non-index controller actions, but the specs are in place for the code that is written and the
+basics of the remaining functionality is specced out as pending.
